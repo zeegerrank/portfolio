@@ -1,19 +1,17 @@
-import { useEffect } from "react";
-import ToggleMode from "./components/ToggleMode";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import PageLayout from "./pages/AppLayout";
+import Home from "./pages/home/Home";
 
 function App() {
-  return (
-    <div>
-      <header className="">
-        <ToggleMode />
-        <h1 className="text-2xl">Hello 👋</h1>
-        <h2 className="text-xl">
-          I'm <strong>Sek Petchabut</strong>, a facility manager at Jaifa
-          Academy
-        </h2>
-      </header>
-    </div>
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <PageLayout />,
+      children: [{ index: true, element: <Home /> }],
+    },
+  ]);
+  return <RouterProvider router={router} />;
 }
 
 export default App;
