@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  darkmode: "class",
+  darkMode: ["class"],
   theme: {
     extend: {
       colors: {
@@ -17,7 +17,7 @@ export default {
           900: "#710511",
           1000: "#44030A",
         },
-        complement: {
+        accent: {
           100: "#9daabd",
           200: "#6c809c",
           300: "#3a567a",
@@ -29,7 +29,7 @@ export default {
           900: "#05162d",
           1000: "#030d1b",
         },
-        accent: {
+        complementary: {
           100: "#fcf9f3",
           200: "#faf6ee",
           300: "#f9f3e8",
