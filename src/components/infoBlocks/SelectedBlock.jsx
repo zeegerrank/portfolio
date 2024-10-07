@@ -30,7 +30,7 @@ function SelectedBlock() {
         "transition-all duration-300",
         "absolute inset-0 translate-x-full bg-red-500",
         "border border-red-500",
-        activeBlock !== null && "translate-x-0",
+        activeBlock !== null && activeBlock !== "home" && "translate-x-0",
       )}
     >
       {shownBlock}

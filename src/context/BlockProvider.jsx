@@ -18,7 +18,7 @@ BlockProvider.propTypes = {
 };
 
 function BlockProvider({ children }) {
-  const [activeBlock, setActiveBlock] = useState(null);
+  const [activeBlock, setActiveBlock] = useState("home");
 
   const BlockObject = useMemo(() => {
     return { activeBlock, setActiveBlock };

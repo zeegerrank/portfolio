@@ -52,9 +52,15 @@ function InfoBlocks({ className }) {
           </div>
         );
       })}
-      <div className="absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%]">
+      <button
+        onClick={() => setActiveBlock("home")}
+        className={twMerge(
+          "absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%]",
+          "bg-green-500 p-6",
+        )}
+      >
         HOME
-      </div>
+      </button>
     </div>
   );
 }
