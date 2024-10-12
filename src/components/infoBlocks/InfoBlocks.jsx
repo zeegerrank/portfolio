@@ -70,7 +70,7 @@ function InfoBlocks({ className }) {
           },
         }}
         animate={activeBlock === "home" ? "atDoor" : "inHome"}
-        className={twMerge("absolute", "rounded-full p-6", "bg-prime-300")}
+        className={twMerge("absolute", "rounded-full p-6", "bg-prime-500")}
       >
         <i className="fa-solid fa-house fa-3x"></i>
       </motion.button>

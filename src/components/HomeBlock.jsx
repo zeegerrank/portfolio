@@ -46,7 +46,7 @@ function HomeBlock() {
         <div
           id="textFrame"
           className={
-            "flex -translate-y-16 gap-1 text-2xl text-complementary-500"
+            "flex -translate-y-16 gap-1 text-2xl text-complementary-100"
           }
         >
           <div
@@ -58,6 +58,7 @@ function HomeBlock() {
                 "transition-all duration-300",
                 "translate-y-0",
                 buttonHover && "-translate-y-8",
+                "hidden sm:block",
               )}
             >
               Hover
@@ -65,8 +66,18 @@ function HomeBlock() {
             <span
               className={twMerge(
                 "transition-all duration-300",
+                "translate-y-0",
+                buttonHover && "font-bold text-prime-500",
+                "sm:hidden",
+              )}
+            >
+              Touch
+            </span>
+            <span
+              className={twMerge(
+                "transition-all duration-300",
                 "translate-y-0 font-semibold text-prime-500",
-                buttonHover && "-translate-y-8",
+                buttonHover && "sm:-translate-y-8",
               )}
             >
               Click
@@ -78,7 +89,9 @@ function HomeBlock() {
       <button
         onClick={() => setActiveBlock(null)}
         onMouseEnter={handleMouseEnter}
+        onTouchStart={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        onTouchEnd={handleMouseLeave}
         className="h-auto w-auto"
         ref={spinButton}
       >
@@ -91,16 +104,6 @@ function HomeBlock() {
             "rounded-full bg-prime-500 p-1",
           )}
         ></motion.i>
-        {/* <motion.i
-          initial={{ translateX: "-50%", translateY: "-50%", rotate: 0 }}
-          animate={{ rotate: "360deg" }}
-          transition={{ duration: 6, ease: "linear", repeat: Infinity }}
-          className={twMerge(
-            "absolute left-[50%] top-[50%]",
-            "fa-solid fa-atom fa-5x",
-            "rounded-full bg-prime-500 p-1",
-          )}
-        ></motion.i> */}
       </button>
     </div>
   );

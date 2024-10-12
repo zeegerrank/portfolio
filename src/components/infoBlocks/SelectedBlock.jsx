@@ -35,7 +35,9 @@ function SelectedBlock() {
     <div
       className={twMerge(
         "transition-all duration-300",
-        "absolute inset-0 translate-x-full bg-red-500",
+        "absolute inset-0 translate-x-full",
+        "from-complementary2-600 to-complementary2-700 bg-gradient-to-r text-accent-900",
+        "dark:from-accent-400 dark:to-accent-500 dark:text-complementary-100",
         activeBlock !== null && activeBlock !== "home" && "translate-x-0",
       )}
     >

@@ -11,8 +11,8 @@ function AppLayout() {
         className={twMerge(
           "h-screen w-screen",
           "transition-all duration-500",
-          "bg-complementary-500 text-accent-500",
-          "dark:text-complementary-500 dark:bg-accent-500",
+          "bg-complementary-100 text-accent-500",
+          "dark:bg-accent-900 dark:text-complementary-100",
         )}
       >
         <Header />
