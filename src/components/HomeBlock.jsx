@@ -13,7 +13,7 @@ function HomeBlock() {
 
   useEffect(() => {
     const controls = animate(rotate, 360, {
-      duration: 2,
+      duration: 3,
       ease: "linear",
       repeat: Infinity,
     });
@@ -36,7 +36,9 @@ function HomeBlock() {
       className={twMerge(
         "transition-all duration-1000",
         "absolute inset-0 -translate-x-full",
-        "bg-transparent bg-gradient-to-r from-accent-500/95 to-accent-900/95 backdrop-blur-[3px]",
+        "bg-transparent bg-gradient-to-r backdrop-blur-[3px]",
+        "from-complementary2-300/80 to-complementary2-700/80",
+        "dark:from-accent-500/95 dark:to-accent-900/95",
         activeBlock === "home" && "-translate-x-0 duration-[1450ms]",
       )}
     >
@@ -45,9 +47,10 @@ function HomeBlock() {
       >
         <div
           id="textFrame"
-          className={
-            "flex -translate-y-16 gap-1 text-2xl text-complementary-100"
-          }
+          className={twMerge(
+            "flex -translate-y-16 gap-1 text-2xl font-semibold",
+            "text-accent2-500 dark:text-complementary-100",
+          )}
         >
           <div
             id="dynamicText"
@@ -83,7 +86,7 @@ function HomeBlock() {
               Click
             </span>
           </div>
-          <span>Me</span>
+          <span className="transition-all duration-300">Me</span>
         </div>
       </div>
       <button
@@ -102,7 +105,9 @@ function HomeBlock() {
             "absolute left-[50%] top-[50%]",
             "fa-solid fa-atom fa-5x",
             "rounded-full bg-prime-500 p-1",
+            "text-accent2-500 dark:text-complementary-100",
           )}
+          transition={{ type: "inertia" }}
         ></motion.i>
       </button>
     </div>
