@@ -1,6 +1,7 @@
 import { twMerge } from "tailwind-merge";
 import PropTypes from "prop-types";
 import { useBlock } from "../../context/BlockProvider";
+import { motion } from "framer-motion";
 
 InfoBlocks.propTypes = {
   className: PropTypes.string,
@@ -52,15 +53,29 @@ function InfoBlocks({ className }) {
           </div>
         );
       })}
-      <button
+      <motion.button
         onClick={() => setActiveBlock("home")}
-        className={twMerge(
-          "absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%]",
-          "bg-green-500 p-6",
-        )}
+        variants={{
+          atDoor: {
+            translateX: "-200vw",
+            translateY: "-50%",
+            transitionDuration: "1400ms",
+            left: "-50%",
+            top: "50%",
+          },
+          inHome: {
+            translateX: ["-200vw", "-50%"],
+            translateY: "-50%",
+            transitionDuration: "1000ms",
+            left: "50%",
+            top: "50%",
+          },
+        }}
+        animate={activeBlock === "home" ? "atDoor" : "inHome"}
+        className={twMerge("absolute", "rounded-full p-6", "bg-prime-300")}
       >
-        HOME
-      </button>
+        <i className="fa-solid fa-house fa-3x"></i>
+      </motion.button>
     </div>
   );
 }
