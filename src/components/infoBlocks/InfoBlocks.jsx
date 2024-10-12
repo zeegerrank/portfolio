@@ -26,7 +26,6 @@ function InfoBlocks({ className }) {
   return (
     <div
       className={twMerge(
-        test,
         "relative h-[80vh] w-screen",
         "flex flex-wrap",
         "bg-transparent backdrop-blur-xl",
@@ -37,7 +36,6 @@ function InfoBlocks({ className }) {
         return (
           <div
             className={twMerge(
-              test,
               "transition-all duration-300",
               "relative overflow-hidden",
               "h-auto w-1/2",
