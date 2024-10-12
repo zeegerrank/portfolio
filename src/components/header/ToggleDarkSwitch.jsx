@@ -1,17 +1,25 @@
 import PropTypes from "prop-types";
 import useToggleDark from "../../hooks/useToggleDark";
+import { twMerge } from "tailwind-merge";
 
-function ToggleDarkSwitch() {
+ToggleDarkSwitch.propTypes = {
+  className: PropTypes.string,
+};
+
+function ToggleDarkSwitch({ className }) {
   const { dark, toggle } = useToggleDark();
 
   return (
     <div
       onClick={toggle}
-      className={`relative inline-flex h-10 w-20 cursor-pointer rounded-full transition-all duration-700 ${
-        dark
-          ? "bg-blue-950 shadow-sm shadow-yellow-100"
-          : "bg-blue-400 shadow-md"
-      } overflow-hidden`}
+      className={twMerge(
+        `relative inline-flex h-10 w-20 cursor-pointer rounded-full transition-all duration-700 ${
+          dark
+            ? "bg-blue-950 shadow-sm shadow-yellow-100"
+            : "bg-blue-400 shadow-md"
+        } overflow-hidden`,
+        className,
+      )}
     >
       <div
         className={`absolute left-1 top-1 h-8 w-8 transition-all duration-700 ${
@@ -77,9 +85,5 @@ function ToggleDarkSwitch() {
     </div>
   );
 }
-
-ToggleDarkSwitch.propTypes = {
-  onClick: PropTypes.func,
-};
 
 export default ToggleDarkSwitch;
