@@ -41,11 +41,7 @@ function SelectedBlock() {
         activeBlock !== null && activeBlock !== "home" && "translate-x-0",
       )}
     >
-      {shownBlock && (
-        <BlockTitleBar className={twMerge("ease-in-out")}>
-          {title}
-        </BlockTitleBar>
-      )}
+      {shownBlock && <BlockTitleBar>{title}</BlockTitleBar>}
       {shownBlock}
     </div>
   );

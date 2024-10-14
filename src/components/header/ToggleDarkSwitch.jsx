@@ -15,8 +15,8 @@ function ToggleDarkSwitch({ className }) {
       className={twMerge(
         `relative inline-flex h-10 w-20 cursor-pointer rounded-full transition-all duration-700 ${
           dark
-            ? "bg-blue-950 shadow-sm shadow-yellow-100"
-            : "bg-blue-400 shadow-md"
+            ? "bg-accent-400 shadow-sm shadow-yellow-100"
+            : "bg-complementary2-400 shadow-md shadow-slate-400"
         } overflow-hidden`,
         className,
       )}
@@ -25,7 +25,7 @@ function ToggleDarkSwitch({ className }) {
         className={`absolute left-1 top-1 h-8 w-8 transition-all duration-700 ${
           dark
             ? "translate-x-10 bg-yellow-400/50 ring-yellow-300/30"
-            : "bg-amber-400 ring-amber-100/25"
+            : "bg-amber-400 ring-yellow-200/75"
         } rounded-full ring-4`}
       >
         {dark ? (
@@ -72,7 +72,7 @@ function ToggleDarkSwitch({ className }) {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
-        className={`absolute size-16 text-blue-50 transition-all duration-1000 ${
+        className={`absolute size-16 text-complementary-100 transition-all duration-1000 ${
           dark ? "-right-full" : "-right-4"
         } `}
       >
