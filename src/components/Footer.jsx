@@ -1,4 +1,6 @@
+import { twMerge } from "tailwind-merge";
 import ButtonDownload from "./ButtonDownload";
+import ContactBand from "./ContactBand";
 
 function Footer() {
   return (
@@ -7,6 +9,7 @@ function Footer() {
         <i className="fa-solid fa-file-arrow-down"></i>
         my_CV.pdf
       </ButtonDownload>
+      <ContactBand />
     </footer>
   );
 }
