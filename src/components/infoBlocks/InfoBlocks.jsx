@@ -26,7 +26,7 @@ function InfoBlocks({ className }) {
   return (
     <div
       className={twMerge(
-        "relative h-[80vh] w-screen",
+        "relative h-[72vh] w-screen",
         "flex flex-wrap",
         "bg-transparent backdrop-blur-xl",
         className,
@@ -41,7 +41,7 @@ function InfoBlocks({ className }) {
               "h-auto w-1/2",
               "flex items-center justify-center text-center",
               activeBlock === i && "-translate-x-5 shadow",
-              "border-accent2-500 border-4 dark:border-complementary-100",
+              "border-4 border-accent2-500 dark:border-complementary-100",
               "text-accent2-500 dark:text-complementary-100",
             )}
             onClick={() =>
@@ -75,7 +75,7 @@ function InfoBlocks({ className }) {
         className={twMerge(
           "absolute",
           "rounded-full p-6",
-          "text-accent2-700 bg-prime-500 dark:text-complementary-100",
+          "bg-prime-500 text-accent2-700 dark:text-complementary-100",
         )}
       >
         <i className="fa-solid fa-house fa-3x"></i>

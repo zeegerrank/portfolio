@@ -4,7 +4,7 @@ import TextAnimate from "./TextAnimate";
 
 function Header() {
   return (
-    <header className={twMerge("flex justify-evenly py-2")}>
+    <header className={twMerge("flex h-[10vh] justify-evenly py-2")}>
       <TextAnimate
         className={twMerge(
           "font-semibold",
