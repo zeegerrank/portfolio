@@ -5,12 +5,7 @@ import TextAnimate from "./TextAnimate";
 function Header() {
   return (
     <header className={twMerge("flex h-[10vh] justify-evenly py-2")}>
-      <TextAnimate
-        className={twMerge(
-          "font-semibold",
-          "text-accent2-500 dark:text-complementary-100",
-        )}
-      />
+      <TextAnimate className={twMerge("font-semibold", "")} />
       <ToggleDarkSwitch />
     </header>
   );

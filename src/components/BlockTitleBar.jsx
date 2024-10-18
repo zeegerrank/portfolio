@@ -12,20 +12,16 @@ function BlockTitleBar({ children, className }) {
   return (
     <div
       className={twMerge(
-        "flex justify-between",
-        "transition-all duration-300",
-        "from-complementary2-100 to-complementary2-300 bg-gradient-to-r",
-        "dark:to-accent2-500 dark:from-accent2-300 dark:bg-gradient-to-r",
-        "text-complementary2-500",
+        "flex justify-between py-1",
+        "transition-all",
+        "bg-secondary dark:bg-primary",
         className,
       )}
     >
       <span
         className={twMerge(
           "flex w-full items-center justify-center text-xl font-bold",
-          "transition-all duration-300",
-          "text-accent-500",
-          "dark:text-complementary-100",
+          "transition-all",
         )}
       >
         {children}
@@ -33,9 +29,10 @@ function BlockTitleBar({ children, className }) {
       <button
         onClick={() => setActiveBlock(null)}
         className={twMerge(
-          "my-1 mr-2 rounded bg-prime-500 px-3 text-3xl font-semibold",
-          "transition-all duration-100",
-          "hover:shadow-lg hover:ring hover:ring-accent-300",
+          "bg-prime-500 my-1 mr-2 rounded px-3 text-3xl font-semibold",
+          "transition-all",
+          "bg-danger dark:text-white",
+          "hover:ring-2 hover:ring-white",
         )}
       >
         X

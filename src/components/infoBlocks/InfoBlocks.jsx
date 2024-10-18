@@ -41,8 +41,7 @@ function InfoBlocks({ className }) {
               "h-auto w-1/2",
               "flex items-center justify-center text-center",
               activeBlock === i && "-translate-x-5 shadow",
-              "border-4 border-accent2-500 dark:border-complementary-100",
-              "text-accent2-500 dark:text-complementary-100",
+              "border-4 border-accent1 dark:border-light dark:text-light",
             )}
             onClick={() =>
               activeBlock === i ? setActiveBlock(null) : setActiveBlock(i)
@@ -73,12 +72,12 @@ function InfoBlocks({ className }) {
         }}
         animate={activeBlock === "home" ? "atDoor" : "inHome"}
         className={twMerge(
-          "absolute",
+          "absolute transition-all",
           "rounded-full p-6",
-          "bg-prime-500 text-accent2-700 dark:text-complementary-100",
+          "bg-accent2 dark:text-light",
         )}
       >
-        <i className="fa-solid fa-house fa-3x"></i>
+        <i className="fa-solid fa-house-user fa-3x"></i>
       </motion.button>
     </div>
   );

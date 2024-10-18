@@ -14,8 +14,9 @@ function ButtonDownload({ children, path }) {
       download
       target="_blank"
       className={twMerge(
-        "bg-complementary-100 text-accent-500 ring",
-        "h-full gap-2 px-5 shadow shadow-slate-600",
+        "font-semibold ring-4 ring-accent1 dark:text-light dark:ring-light",
+        "shadow shadow-slate-600 dark:shadow-slate-300",
+        "h-full gap-2 px-5",
         "flex items-center justify-center",
       )}
     >

@@ -12,6 +12,7 @@ function TextAnimate({ className }) {
       className={twMerge(
         className,
         "flex w-2/5 items-center justify-center text-xl",
+        "dark:text-light",
       )}
       options={{ loop: true }}
       getBeforeInit={(instance) => {

@@ -2,15 +2,15 @@ import { twMerge } from "tailwind-merge";
 const iconsList = [
   {
     icon: <i className="fa-brands fa-facebook-f fa-2x"></i>,
-    bgColor: "bg-accent-500",
+    unique: "bg-blue-800 dark:bg-blue-600 text-white",
   },
   {
     icon: <i className="fa-brands fa-github fa-2x"></i>,
-    bgColor: "bg-purple-500",
+    unique: "bg-black text-white dark:bg-white dark:text-black",
   },
   {
     icon: <i className="fa-brands fa-instagram fa-2x"></i>,
-    bgColor: "bg-pink-500",
+    unique: "bg-pink-600 dark:bg-pink-500 text-white",
   },
 ];
 
@@ -21,10 +21,10 @@ function ContactBand() {
         <div
           key={i}
           className={twMerge(
-            "text-complementary-100",
             "h-12 w-16",
             "flex items-center justify-center",
-            e.bgColor,
+            "transition-all duration-500",
+            e.unique,
           )}
         >
           {e.icon}
