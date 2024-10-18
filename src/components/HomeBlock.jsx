@@ -17,7 +17,6 @@ function HomeBlock() {
       ease: "linear",
       repeat: Infinity,
     });
-    console.log(controls);
 
     controlsRef.current = controls;
   }, [rotate]);
