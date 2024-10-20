@@ -46,7 +46,7 @@ function ButtonDownload({ children, path }) {
         "hover:border-accent2/50 hover:bg-accent2/70",
         "hover:border-accent2 hover:bg-accent2",
         "text-accent1/70 hover:text-accent1/95",
-        "h-full gap-2 px-5",
+        "h-1/2 gap-2 px-5",
         "flex items-center justify-center",
       )}
     >
