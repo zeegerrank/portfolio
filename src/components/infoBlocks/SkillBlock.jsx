@@ -146,7 +146,7 @@ function GroupSkills({ field }) {
       <h2 className={twMerge("pb-1 text-lg font-semibold")}>
         {field.toUpperCase()}
       </h2>
-      <div className={twMerge("flex flex-wrap justify-evenly gap-1")}>
+      <div className={twMerge("flex flex-wrap gap-1")}>
         {data[0][field].map((el, i) => (
           <div
             key={i}
@@ -170,7 +170,7 @@ function SkillBlock() {
     <div
       className={twMerge(
         "w-full",
-        "scroll-m-10 overflow-y-auto",
+        "scroll-m-10",
 
         "flex flex-wrap justify-evenly gap-2",
       )}
