@@ -16,7 +16,10 @@ const iconsList = [
 
 function ContactBand() {
   return (
-    <div className={twMerge("h-full w-full", "flex items-center justify-end")}>
+    <div
+      className={twMerge("h-full w-fit", "flex items-center justify-end")}
+      onClick={(e) => e.stopPropagation()}
+    >
       {iconsList.map((e, i) => (
         <div
           key={i}

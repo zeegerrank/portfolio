@@ -1,10 +1,15 @@
 import { twMerge } from "tailwind-merge";
 import ButtonDownload from "./ButtonDownload";
 import ContactBand from "./ContactBand";
+import { useBlock } from "../context/BlockProvider";
 
 function Footer() {
+  const { setActiveBlock } = useBlock();
   return (
-    <footer className="flex h-[10vh] items-center py-2">
+    <footer
+      className="flex h-[20vh] items-center justify-between py-2"
+      onClick={() => setActiveBlock(null)}
+    >
       <ButtonDownload path="/public/grunge_brush_stroke_frames_set.jpg">
         <i className="fa-solid fa-file-arrow-down"></i>
         my_CV.pdf

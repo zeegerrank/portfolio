@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 function useToggleDark(initialState = false) {
   const [dark, setDark] = useState(initialState);
 
-  const toggle = () => {
+  const toggle = (e) => {
+    e.stopPropagation();
     setDark((dark) => !dark);
   };
 

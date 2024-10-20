@@ -13,6 +13,7 @@ function ButtonDownload({ children, path }) {
 
   return (
     <motion.a
+      onClick={(e) => e.stopPropagation()}
       onMouseEnter={() => setHover(true)}
       onTouchStart={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
